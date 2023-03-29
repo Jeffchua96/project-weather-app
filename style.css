@@ -7,24 +7,18 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     flex-wrap:wrap;
 }
-
-
 .card {
     display: flex;
-    margin: 1em;
-    background-color: blue;
-    padding: 2em;
-    border-radius: 30px;
-    max-width: 420px;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    margin: 1pc 4pc;
+    flex-direction: row;
     width: 100%;
     border-image:round ;
 
 }
 
-.icons{
-    display: flex;
-    image-resolution: 20px;
-}
 
 
 input.searh-bar {
