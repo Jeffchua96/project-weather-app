@@ -1,45 +1,28 @@
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    flex-wrap:wrap;
-}
-.card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
-    margin: 1pc 4pc;
-    flex-direction: row;
-    width: 100%;
-    border-image:round ;
-
+body{
+display: grid;
+grid-template-areas: calc(
+  'head head head'
+ "menu main right"
+  "footer");
+ width: 100%;
 }
 
+.grid-container{
+grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  margin-block: auto;
+  padding: 1rem;
+  border-radius: 2em;
+}
 
-
-input.searh-bar {
-    margin: 0;
-    border-radius: 20px;
-    height: 30px;
-    width: max-content;
-    
-.
-.button {
+  .h1 {
     font-style: italic;
-    color: white;
-    background: black;
-    max-width: none;
-    border-radius: 30px;
-    height: 30px;
     justify-content: center;
-    align-items: center;
-    width: auto;
-    border-radius: 30px;
-}
-.lower-box{
-    grid-template-rows: 20% 20% 20%;
-}
+    display: grid;
+  }
+
+  
+  

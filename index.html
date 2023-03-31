@@ -5,50 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="main.js"></script>
-    
+    <link rel="stylesheet" href="style.css"/>
+    <script href="script.js"></script> 
+	<link rel="stylesheet" type="text/css" href="https://adobe-fonts.github.io/source-code-pro/source-code-pro.css">
+	<link rel="stylesheet" type="text/css" href="/files/style.css" />
+    <style>
+        .card { grid-area: header; }
+        .lowerleft { grid-area: menu; }
+        .center{ grid-area: main; }
+        .lowerright{ grid-area: right;}
+        .item5 { grid-area :footer;} 
+        .grid-container {
+          display: grid;
+          grid-template-areas:
+            'Header Header Header'
+            'menu main main right'
+            'foooter';
+          gap: 10px;
+          background-color: #2196F3;
+          padding: 10px;
+        }
+          .grid-container > .card{
+            background-color: rgba;
+            text-align:center;
+            padding: 20px 0;
+            font-size:30px;
+          }
+     </style>   
 </head>
 <body>
+    <div class="grid-contianer">
     
-    <div class="upperbox">
-        <div class="card">      
-            <h1>Weather App</h1>
-                <div class="Info-value">pick a location</div>
-                 <input type="text" class="searh-bar">
-                 <button>Get Weather</button>
+         <div class="card"><h1>Weather App</h1>
+       
+       
+    <form>
+        <label for="Pick a location:"</label><br>
+        <input type="text" id="weatherbox" type="submit" placeholder="City Name..." ><br>
+         <label submit="weatherbox"></label>
+            <input type="button" value="weatherbox>
+>    </form>
+         </div>
+        
+        <div class="lowerleft">
+          <form>
+            <ul class="Convert Temp. "l>
+                <p >To Celcious <span  class</p>
+                <li text="To Celcius"><button></button></li>
+                <li class="To Farenheot"><button></button></li>
+                <button>submit</button>
+              </ul>
+          </form>
         </div>
-    </div>    
-        <br>
-        <div class=" lower-box">
-            <div class="lower-left>"</div>
-                <div class="lower-mid">
-                    <h2 class="city">Weather in New-York</h2>
-                    <img src="/Users/jeffersonchua/Desktop/project-weather-app/assets/icons8-summer.gif">
-                    <div class="temp">48°F</div>
-                    <div class="humidity">50%</div>
-            </div>
-            <div class="lower-mid">
-                 
-                    
-            </div>
-        <img src="/Users/jeffersonchua/Desktop/project-weather-app/assets/icons8-torrential-rain.gif">
+
+        <div class="center">
+        <h3> Current City </h3>
+        
+        <img src="/Users/jeffersonchua/Desktop/project-weather-app/assets/icons8-summer.gif" alt="Sun">
+                    <p Choose a location to view the weather></p>
+                <p id="area-name"></p>
+                <span id="Nearest_area"></span>
+                <p id="area"></p>
+                <span id="Country:"></span>
+                <p id="count"></p>
+            
+        </div>
+                            
+         <div class="lowerright">article</div>   
+         
+                   
+        
         <div class="description">cloudy</div>
-        <img src="/Users/jeffersonchua/Desktop/project-weather-app/assets/icons8-rain-cloud.gif">
+        
         <div class="wind">60 mph</div>
-        <img src="/Users/jeffersonchua/Desktop/project-weather-app/assets/icons8-wind.gif">
-        </div>
+       
+      
     <div class="lower-right-corncer">
                 <ul choose a location to view the weather>
                    <li> Previous Searches</li>
                 </ul>
     </div>
-        
-
-
-    
-
-
-    
+      
 </body>
+  
 </html>
