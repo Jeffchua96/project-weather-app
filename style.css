@@ -1,105 +1,271 @@
+/* Base styles */
 
-  body{
- width: 100%;
-    display: grid;
-    overflow: auto;
-    min-height: 100vh;
-    align-items: center;
-  } */
-/*   
-  .sidebar {
-    width: 300px;
-    height: 80vh;
-    display: flex;
-    padding: var(--dl-space-space-twounits);
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: space-between;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
   }
-  .nav {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .icon {
-    width: var(--dl-size-size-xsmall);
-    height: var(--dl-size-size-xsmall);
-    margin-bottom: var(--dl-space-space-twounits);
-  }
-  .text {
-    margin-bottom: var(--dl-space-space-twounits);
-  }
-  .text1 {
-    margin-bottom: var(--dl-space-space-twounits);
-  }
-  .text2 {
-    margin-bottom: var(--dl-space-space-twounits);
-  }
-  .text3 {
-    margin-bottom: var(--dl-space-space-twounits);
-  }
-  .profile {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding-top: var(--dl-space-space-unit);
-    border-color: var(--dl-color-gray-900);
-    border-width: 1px;
-    flex-direction: row;
-    justify-content: flex-start;
-    border-left-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 0px;
-  }
-  .image {
-    width: var(--dl-size-size-small);
-    height: var(--dl-size-size-small);
-    object-fit: cover;
-    border-radius: var(--dl-radius-radius-round);
-  }
-  .container1 {
-    display: flex;
-    align-items: flex-start;
-    margin-left: var(--dl-space-space-halfunit);
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .text5 {
-    font-size: 1.15rem;
-    font-style: normal;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-  }
-  .text6 {
-    color: var(--dl-color-gray-500);
-    font-size: 0.75rem;
-  }
-  @media(max-width: 991px) {
-    .profile {
-      padding-left: var(--dl-space-space-halfunit);
-      padding-right: var(--dl-space-space-halfunit);
-    }
-    .image {
-      margin-left: 0px;
-    }
-  }
-  @media(max-width: 767px) {
-    .icon {
-      display: flex;
-    }
-  }
-   */  
-
-/* .grid-container{
- grid-auto-flow: column;
-  justify-content: center;
-  align-items: center;
-  background-color: green;
-  margin-block: auto;
-  padding: 1rem;
-  border-radius: 2em;
-} *
-
   
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"] {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  #temp-conversion, #weather-history{
+    height         : 300px;
+
+  }
+
+  #temp-conversion{
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : column;
+  }
+
+  #upcoming-weather aside{
+    background-color: white !important;
+  }
+
+  #image{
+    margin-bottom: 16px;
+  }
+
+  #weather-history{
+    background-color: white !important;
+    margin-left: 16px;
+  }
+
+  #current-weather{
+    height          : fit-content;
+    background-color: #d3d3d3;
+    padding         : 24px;
+  }
+
+  #current-weather div{
+    text-align: center;
+    height: 35px;
+  }
+
+  .weather-data-label{
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul li{
+    list-style-type: circle;
+  }
+  
+  /* Layout styles */
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header"
+      "sidebar main";
+    min-height: 100vh;
+  }
+  
+  header {
+    grid-area       : header;
+    background-color: #007bff;
+    color           : #fff;
+    padding         : 1rem;
+    text-align      : center;
+  }
+  
+  main {
+        display: flex;
+  }
+
+  #upcoming-weather .section{
+    display: flex !important; 
+  }
+
+  #todaySection, #dayAfterTomorrowSection, #tomorrowSection{
+    width: 33%;
+  }
+  
+  .small{
+    width: 25%;
+    margin: 0px 8px
+  }
+
+  .big{
+    width: 50%;
+  }
+
+  aside {
+    background-color: #f1f1f1;
+    padding: 1rem;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #f1f1f1;
+    padding: 1rem;
+  }
+  
+  .sidebar p {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Weather styles */
+  
+  .weather {
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  
+  .weather__location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .weather__icon {
+    font-size: 3rem;
+    color: #007bff;
+  }
+  
+  .weather__temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+  
+  .weather__description {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .weather__details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .weather__details-item {
+    font-size: 1rem;
+  }
+  
+  /* History styles */
+  
+  .history {
+    margin-top: 1rem;
+  }
+  
+  .history h4 {
+    margin-top: 0;
+  }
+  
+  .history__item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .history__link {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  /* Temperature conversion widget styles */
+  
+  .temperature-conversion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .temperature-conversion__label {
+    margin-right: 0.5rem;
+  }
+  .temperature-conversion__input {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .temperature-conversion__input label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .temperature-conversion__input input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .temperature-conversion__button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #2d88ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .temperature-conversion__button:hover {
+    background-color: #1565c0;
+  }
+  
+  .temperature-conversion__result {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    display: none;
+  }
+  
+  .temperature-conversion__result p {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .temperature-conversion__result span {
+    font-weight: normal;
+  }
   

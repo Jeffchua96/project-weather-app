@@ -5,93 +5,147 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
-    <script href="script.js"></script>
-    <style>
-      .item1{
-        grid-area: myArea;
-      }
-      .grid-container {
-        display: grid;
-        grid-template-areas: 'myArea myArea myArea';
-        gap: 10px;
-        padding: 10px;
-      }
-     
-        
+    <link rel="stylesheet" href="./style.css">
+    <script href=" main.js"></script>
     
-
-  </style>
 </head>
 <body>
+    <header>
+        <h1>Weather App</h1>
+        <form id="search-form">
+            <label for="city-input">Enter city:</label>
+            <input type="text" id="city-input" name="city">
+            <input type="submit" id="search-button"/>
+          </form>
+    </header>
 
+    <main>
+        <aside id="temp-conversion" class="grid-item small">
+            <aside id="form">
+               <form id="mainForm">
+                <label for="temp-to-convert">Convert the temperature:</label>
+                <input type="number" value="0" id="temp-to-convert" name="temp-to-convert">
+            
+                <div style="display:  flex; margin-top: 8px; justify-content: space-between;">
+                    <label for="to-c">To Celcius</label>
+                    <input type="radio" checked id="to-c" name="convert-temp" value="c">
+                </div>
 
-  <div class="grid-container">
-    <div class="item1">
-      
-         <h1>Weather App</h1>
-      
-   <form>
-       <label for="Pick a location:"</label><br>
-       <input type="text" id="weatherbox" type="submit" placeholder="City Name..." ><br>
-        <label submit="weatherbox"></label>
-           <input type="button" value="Get Weather">
-   </form>
-        </div>
+                <div style="display:  flex; margin-top: 8px; justify-content: space-between;">
+                    <label for="to-f">to Farenheit</label>
+                    <input type="radio" id="to-f" name="convert-temp" value="f">
+                </div>
 
-    <div class="item2">2
-      <form>
-        <ul class="Weather-box-addon">
-            <p >To Celcious <span  class</p>
-            <li text="To Celcius"><button></button></li>
-            <li class="To Farenheot"><button></button></li>
-            <button>submit</button>
-          </ul>
-      </form>
-    </div>
+                <input style="margin-top: 8px;" id="convertBtn" type="submit"/>
+            
+               </form>
+               <h4 style="font-weight: bold; margin-top: 8px;" id="result">
+                    <!-- 37.78 -->
+                </h4>
+                </aside>
+              <p id="text">Choose a location to view the weather</p>
+        </aside>
+        <section class="grid-item big">
+            <section id="current-weather" style="text-align: center;">
+                <img id="image" height="150" width="200px" alt="" />
+                <h2 style="text-align: center;">Current Weather</h2>
+                <article id="current-weather-data">
+                    <div style="display: flex; justify-content: center;">
+                        <h2 class="weather-data-label">City:</h2>
+                        <h2 class="weather-data-value" id="city-name"></h2>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <p class="weather-data-label" id="nearest-area-label">Nearest Area:</p>
+                        <p class="weather-data-value" id="nearest-area"></p>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <p class="weather-data-label">Region:</p>
+                        <p class="weather-data-value" id="region"></p>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <p class="weather-data-label">Country:</p>
+                        <p class="weather-data-value" id="country"></p>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <p class="weather-data-label">Currently:</p>
+                        <p class="weather-data-value" id="feels-like"></p>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <p class="weather-data-label">Chance of Rain:</p>
+                        <p class="weather-data-value" id="chance-of-rain"></p>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <p class="weather-data-label">Chance of Sunshine:</p>
+                        <p class="weather-data-value" id="chance-of-sunshine"></p>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <p class="weather-data-label">Chance of Snow:</p>
+                        <p class="weather-data-value" id="chance-of-snow"></p>
+                    </div>
+                </article>
+            </section>
+            
+            <section id="upcoming-weather">
+                <aside class="section">
+                    <article id="todaySection"> 
+                        <h3 >Today</h3>
+                        <div style="margin-top: 8px;">
+                            <span class="weather-data-label" style="font-size: 14px; text-align: center;">Average Temperature:</span>
+                            <span class="weather-data-value" style="font-size : 12px;" id="averageTemp1"></span>
+                        </div>
+                        <div  style="margin-top: 8px;">
+                            <span class="weather-data-label" style="font-size: 14px; text-align: center;">Min Temperature:</span>
+                            <span class="weather-data-value" style="font-size : 12px;" id="minTemp1"></span>
+                        </div>
+                        <div  style="margin-top: 8px;">
+                            <span class="weather-data-label" style="font-size: 14px; text-align: center;">Max Temperature:</span>
+                            <span class="weather-data-value" style="font-size : 12px;" id="maxTemp1"></span>
+                        </div>
+                    </article>
+                    <article id="tomorrowSection">
+                        <h3 >Tomorrow</h3>
+                        <div  style="margin-top: 8px;" >
+                            <span class="weather-data-label" style="font-size: 14px; text-align: center;">Average Temperature:</span>
+                            <span class="weather-data-value" style="font-size : 12px;" id="averageTemp2"></span>
+                        </div>
+                        <div style="margin-top: 8px;">
+                            <span class="weather-data-label" style="font-size: 14px; text-align: center;">Min Temperature:</span>
+                            <span class="weather-data-value" style="font-size : 12px;" id="minTemp2"></span>
+                        </div>
+                        <div  style="margin-top: 8px;">
+                            <span class="weather-data-label" style="font-size: 14px; text-align: center;">Max Temperature:</span>
+                            <span class="weather-data-value" style="font-size : 12px;" id="maxTemp2"></span>
+                        </div>
+                    </article>
+                    <article id="dayAfterTomorrowSection">
+                        <h3 >Day After Tomorrow</h3>
+                        <div  style="margin-top: 8px;">
+                            <span class="weather-data-label" style="font-size: 14px; text-align: center;">Average Temperature:</span>
+                            <span class="weather-data-value" style="font-size : 12px;" id="averageTemp3"></span>
+                        </div>
+                        <div  style="margin-top: 8px;">
+                            <span class="weather-data-label" style="font-size: 14px; text-align: center;">Min Temperature:</span>
+                            <span class="weather-data-value" style="font-size : 12px;" id="minTemp3"></span>
+                        </div>
+                        <div  style="margin-top: 8px;">
+                            <span class="weather-data-label" style="font-size: 14px; text-align: center;">Max Temperature:</span>
+                            <span class="weather-data-value" style="font-size : 12px;" id="maxTemp3"></span>
+                        </div>
+                    </article>
+                </aside>
+            </section>
+        </section>
+        <aside class="grid-item small" id="weather-history">
+            <section>
+                <h5>Previous Searches</h5>
+                <ul id="searchedCities">
+                    <p>No previous searches.</p>
+                </ul>
+            </section>
+        </aside>
+    </main>
 
-    <div class="item3">
-
-      <h3> Current City </h3>
-        
-      <img src="/Users/jeffersonchua/Desktop/project-weather-app/assets/icons8-summer.gif" alt="Sun">
-                  <p Choose a location to view the weather></p>
-              <p >Nearest area</p>
-              <span id="Nearest_area"></span>
-              <p id="area"></p>
-              <span id="Reg:"></span>
-              <p> Country</p>
-              <span id="count" ></span>
-              <p>Currently</p>
-              <span id="curr"> </span>
-          
-      </div>
-                        
-
-    <div class="item4">
-   
-    <div class="lower-right-corncer">
-      <ul choose a location to view the weather>
-         <li> Previous Searches</li>
-      </ul>
-    </div>
-        
-          
-
-        
-       
-        
-         
-                   
-        
-        <div class="description">cloudy</div>
-        
-        <div class="wind">60 mph</div>
-       
-      
-    </ul>
-    </div>
-</style>
+    <script src="app.js"></script>
 </body>
-  
+<script src="./main.js"></script>
 </html>
