@@ -1,28 +1,105 @@
 
-body{
-display: grid;
-grid-template-areas: calc(
-  'head head head'
- "menu main right"
-  "footer");
+  body{
  width: 100%;
-}
+    display: grid;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+  } */
+/*   
+  .sidebar {
+    width: 300px;
+    height: 80vh;
+    display: flex;
+    padding: var(--dl-space-space-twounits);
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .nav {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .icon {
+    width: var(--dl-size-size-xsmall);
+    height: var(--dl-size-size-xsmall);
+    margin-bottom: var(--dl-space-space-twounits);
+  }
+  .text {
+    margin-bottom: var(--dl-space-space-twounits);
+  }
+  .text1 {
+    margin-bottom: var(--dl-space-space-twounits);
+  }
+  .text2 {
+    margin-bottom: var(--dl-space-space-twounits);
+  }
+  .text3 {
+    margin-bottom: var(--dl-space-space-twounits);
+  }
+  .profile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: var(--dl-space-space-unit);
+    border-color: var(--dl-color-gray-900);
+    border-width: 1px;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+  }
+  .image {
+    width: var(--dl-size-size-small);
+    height: var(--dl-size-size-small);
+    object-fit: cover;
+    border-radius: var(--dl-radius-radius-round);
+  }
+  .container1 {
+    display: flex;
+    align-items: flex-start;
+    margin-left: var(--dl-space-space-halfunit);
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .text5 {
+    font-size: 1.15rem;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  .text6 {
+    color: var(--dl-color-gray-500);
+    font-size: 0.75rem;
+  }
+  @media(max-width: 991px) {
+    .profile {
+      padding-left: var(--dl-space-space-halfunit);
+      padding-right: var(--dl-space-space-halfunit);
+    }
+    .image {
+      margin-left: 0px;
+    }
+  }
+  @media(max-width: 767px) {
+    .icon {
+      display: flex;
+    }
+  }
+   */  
 
-.grid-container{
-grid-auto-flow: column;
+/* .grid-container{
+ grid-auto-flow: column;
   justify-content: center;
   align-items: center;
   background-color: green;
   margin-block: auto;
   padding: 1rem;
   border-radius: 2em;
-}
-
-  .h1 {
-    font-style: italic;
-    justify-content: center;
-    display: grid;
-  }
+} *
 
   
   
