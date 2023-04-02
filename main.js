@@ -115,9 +115,9 @@ function convertTemperature(e) {
 
   if (toCelsius) {
     console.log('zee1')
-    result = (tempToConvert - 32) * 5 / 9°;
+    result = (tempToConvert - 32) * 5 / 9;
   } else if (toFahrenheit) {
-    result = (tempToConvert * 9 / 5) + 32°;
+    result = (tempToConvert * 9 / 5) + 32;
   }
 
   formatNumber(result)
